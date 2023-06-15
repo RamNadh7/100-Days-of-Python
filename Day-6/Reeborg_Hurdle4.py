@@ -19,6 +19,7 @@ def jump():
 
 while not at_goal():
     if front_is_clear():
-            move()
+            if not at_goal():
+                move()
     else:
         jump()

@@ -1,4 +1,4 @@
-from replit import clear
+# from replit import clear
 #HINT: You can call clear() to clear the output in the console.
 
 bid_data=[]
@@ -18,7 +18,8 @@ def max_bid():
     if i["bid"]>top_bid:
       top_bid=i["bid"]
       name=i["name"]
-  clear()
+  #clear()
+  #since the "replit" module is not available the clear() function may not work on platforms
   print(f"The winner is {name} with bid amount {top_bid}")
   
 
@@ -31,7 +32,7 @@ while not is_end:
   New_Player=input("Are there any bidders? Type Yes or No : ").lower()
   if New_Player=="yes":
     is_end=False
-    clear()
+    #clear()
   else:
     is_end=True
   

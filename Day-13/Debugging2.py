@@ -23,7 +23,7 @@ else:
   
 
 
-  for number in range(1, 101):
+for number in range(1, 101):
   if number % 3 == 0 and number % 5 == 0:
     # Added "and" instead of "or", if is changed to elif, and removed the [] in print function
     print("FizzBuzz")

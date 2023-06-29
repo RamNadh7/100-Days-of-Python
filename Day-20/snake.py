@@ -1,3 +1,7 @@
+"""
+Check Day 21 for full code
+"""
+
 from turtle import Turtle,Screen
 positions=[(0,0), (-20,0), (-40,0)]
 MOVE_DISTANCE=20

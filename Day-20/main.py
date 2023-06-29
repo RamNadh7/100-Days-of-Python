@@ -1,3 +1,7 @@
+"""
+Check Day 21 for full code
+"""
+
 from turtle import Turtle,Screen
 import time
 from snake import Snake

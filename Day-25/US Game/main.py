@@ -15,11 +15,17 @@ states_list=data.state.to_list()
 
 while len(Guessed_states) < 50:
     usr_answer=screen.textinput(title=f"{len(Guessed_states)}/50 States Correct",prompt="What's the another state name?").title()
+
+    
+
     if usr_answer=="Exit":
-        missingstates=[]
-        for state in states_list:
-            if state not in Guessed_states:
-                missingstates.append(state) 
+        #Implemented with lsit comprehension
+        missingstates=[state for state in states_list if state not in Guessed_states]
+    #     missingstates=[]
+    #     for state in states_list:
+    #         if state not in Guessed_states:
+    #             missingstates.append(state) 
+    # 
         new_data=pandas.DataFrame(missingstates)
         new_data.to_csv("Missed States.csv")
         break

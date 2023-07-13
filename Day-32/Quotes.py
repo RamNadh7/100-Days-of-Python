@@ -20,7 +20,10 @@ if day_of_week==0:
     Today_quote=random.choice(quote_data_list)
 
     #connection = smtplib.SMTP("smtp.gmail.com")
-"""
+   
+
+    with smtplib.SMTP("smtp.gmail.com") as connection:
+        """
 Gmail: smtp.gmail.com
 
 Hotmail: smtp.live.com
@@ -29,8 +32,6 @@ Outlook: outlook.office365.com
 
 Yahoo: smtp.mail.yahoo.com
 """
-
-    with smtplib.SMTP("smtp.gmail.com") as connection:
         connection.starttls()
         connection.login(user=MY_EMAIL,password=PASSWORD)
         connection.sendmail(from_addr=MY_EMAIL, to_addrs="To Mail Id", msg=f"Subject:Mondays Motivation\n{Today_quote}")

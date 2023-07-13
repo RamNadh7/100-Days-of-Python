@@ -2,9 +2,11 @@ import smtplib
 import datetime as dt
 import random
 
-MY_EMAIL= "ramanadh99@gmail.com"
-PASSWORD= "cdkjgekexaydlesm"
-
+MY_EMAIL= "Your Maild ID"
+PASSWORD= "Generated Password"
+"""
+Generate the password from app passwords from google account settings security tab
+"""
 
 now=dt.datetime.now()
 day_of_week=now.weekday()
@@ -18,11 +20,20 @@ if day_of_week==0:
     Today_quote=random.choice(quote_data_list)
 
     #connection = smtplib.SMTP("smtp.gmail.com")
+"""
+Gmail: smtp.gmail.com
+
+Hotmail: smtp.live.com
+
+Outlook: outlook.office365.com
+
+Yahoo: smtp.mail.yahoo.com
+"""
 
     with smtplib.SMTP("smtp.gmail.com") as connection:
         connection.starttls()
         connection.login(user=MY_EMAIL,password=PASSWORD)
-        connection.sendmail(from_addr=MY_EMAIL, to_addrs="raviraj1998a@gmail.com", msg=f"Subject:Mondays Motivation\n{Today_quote}")
+        connection.sendmail(from_addr=MY_EMAIL, to_addrs="To Mail Id", msg=f"Subject:Mondays Motivation\n{Today_quote}")
         
         #As we used the With methd to create conection need not to close it manually just like file open method
         #connection.close()

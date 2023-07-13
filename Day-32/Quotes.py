@@ -6,6 +6,7 @@ MY_EMAIL= "Your Maild ID"
 PASSWORD= "Generated Password"
 """
 Generate the password from app passwords from google account settings security tab
+
 """
 
 now=dt.datetime.now()
